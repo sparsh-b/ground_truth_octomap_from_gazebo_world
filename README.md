@@ -26,6 +26,9 @@
   - While executing the `rosrun` command, set the `GAZEBO_PLUGIN_PATH` env variable to the directory containing the `libBuildOctomapPlugin.so` plugin so that Gazebo can find it.
   - While executing the `rosservice` command, source the `<path-to-catkin_sim_environment>/devel/setup.bash` file in the terminal in which you want to run `rosservice` command.
 
+## Note
+- From my experimentation, I found that the coordinate frame for the resulting octomap is the same as the Gazebo coordinate frame.
+- i.e, The coordinates of a voxel of interest in the resulting ocotmap will be the same as the coordinates of the same voxel in Gazebo.
 
 ## Errors
 - Facing a few errors (and not resolving them) was alright for me as long as the `libBuildOctomapPlugin.so` plugin got built after running [this](#catkin-make-cmd) `catkin_make` command.
